@@ -1,0 +1,180 @@
+openapi: 3.0.3
+info:
+  title: E-Commerce-REST-API
+  version: "1"
+paths:
+  /users/:id:
+    get:
+      summary: Get user record
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - USER
+    put:
+      summary: Update user record
+      description: Update user record
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - USER
+  /auth/register:
+    post:
+      summary: Register a new user
+      description: Register a new user
+      responses:
+        "200":
+          description: 200 Success
+        "409":
+          description: 409 Conflict
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - AUTH
+  /auth/login:
+    post:
+      summary: Login to a user account
+      description: Login to a user account
+      responses:
+        "200":
+          description: 200 Success
+        "401":
+          description: 401 Unauthorized
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - AUTH
+  /carts/user:
+    get:
+      summary: Get user cart
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - CART
+    post:
+      summary: Create user cart
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - USER
+    delete:
+      summary: Remove user cart
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - CART
+  /carts/user/items:
+    post:
+      summary: Add items into user's cart
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - CART ITEMS
+  /carts/user/items/:itemId:
+    put:
+      summary: Update item in user's cart
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - CART ITEMS
+    delete:
+      summary: Remove item in user's cart
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - CART ITEMS
+  /carts/user/checkout:
+    post:
+      summary: Checkout user's cart
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - CHECK OUT
+  /products:
+    get:
+      summary: Get all products
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - PRODUCT
+  /product/:productId:
+    get:
+      summary: Get product
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - PRODUCT
+  /orders:
+    get:
+      summary: Get all orders
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - ORDER
+  /orders/:orderId:
+    get:
+      summary: Get order
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - ORDER
+    delete:
+      summary: Remove order
+      description: ""
+      responses:
+        "200":
+          description: 200 Success
+        "500":
+          description: 500 Internal Server Error
+      tags:
+        - ORDER

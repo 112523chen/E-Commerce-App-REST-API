@@ -51,3 +51,6 @@ CREATE TABLE IF NOT EXISTS cartItems (
     FOREIGN KEY (cartId) REFERENCES carts(id),
     FOREIGN KEY (productId) REFERENCES products(id)
 );
+
+INSERT INTO users (email, password, lastname, firstname)
+VALUES ('alex@example.com','random', 'Chen', 'Alex');
